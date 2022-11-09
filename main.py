@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from mangum import Mangum
 
-from api.api_v1.api import router as api_router
+from api.api_v2.api import router as api_router
 
 
 app = FastAPI()
@@ -10,7 +10,7 @@ app = FastAPI()
 async def root():
     return {"message": "This API provides services for analyzing text data."}
 
-app.include_router(api_router, prefix = "/api/v1")
+app.include_router(api_router, prefix = "/api/v2")
 
 #handler = Mangum(app) 
 
