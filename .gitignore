@@ -1,3 +1,6 @@
 learn-ml-torch-37/
 .vscode
 **/__pycache__/
+stanza/
+env/
+__pycache__/
