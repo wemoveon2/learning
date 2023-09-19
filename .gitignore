@@ -4,3 +4,4 @@ learn-ml-torch-37/
 stanza/
 env/
 __pycache__/
+**/.env
