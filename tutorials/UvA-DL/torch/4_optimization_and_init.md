@@ -46,10 +46,10 @@ $$
 y_i &= \sum_j w_{ij}x_{j} \\
 Var(y_i) &= \sigma^2_x = Var(\sum_j w_{ij}x_{j}) \\ 
 &= \sum_j Var(w_{ij}x_{j}) \\ 
-&= \sum_j Var(w_{ij}) \cdot Var(x_j) \\ \text{Variance rule with expectation being 0}
-&= d_x \cdot Var(w_{ij}) \cdot Var(x_j) \\ \text{Variance equal for all elements}
+&= \sum_j Var(w_{ij}) \cdot Var(x_j) \text{Variance rule with expectation being 0} \\
+&= d_x \cdot Var(w_{ij}) \cdot Var(x_j) \text{Variance equal for all elements} \\
 &= \sigma^2_x \cdot d_x \cdot Var(w_{ij}) \\ 
-Var(w_{ij}) &= \sigma^2_{W} = \frac{1}{d} 
+Var(w_{ij}) &= \sigma^2_{W} = \frac{1}{d} \\
 \end{align}
 $$
 
