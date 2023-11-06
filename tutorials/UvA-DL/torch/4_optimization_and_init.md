@@ -156,7 +156,7 @@ class Adam(OptimizerTemplate):
 - All three optimization techniques perform similarly well, but this can be due to the initialization used.
   - Adam is usually more robust due to the adaptive learning rate.
 
-### Pathological Curvatures 
+#### Pathological Curvatures 
 
 - These are a type of surface similar to ravines and is particularly tricky for plain SGD.
   - Contains steep gradients in one direction with a (local) optimum, while a second direction has a slower gradient towards a global optimum.
@@ -167,9 +167,30 @@ class Adam(OptimizerTemplate):
   - However, if we encounter a point along the ridge, the gradient is much greater in $w_1$ than $w_2$, can lead us to jump from side to side of the ravine.
   - We would have to reduce learning rate.
 
+- Comparing the three optimization techniques on this loss surface, we can see that plain SGD is unable to find the global optimum. Adam and SGD with momentum are able to converge while plain SGD fails to do so.
 
+![](https://uvadlc-notebooks.readthedocs.io/en/latest/_images/tutorial_notebooks_tutorial4_Optimization_and_Initialization_65_0.svg)
 
+#### Steep Optima
 
+- Second type of challenging loss surface are steep optima. These surfaces have small gradients for most of the surface while around the optimum there's very large gradients.
+
+![](https://uvadlc-notebooks.readthedocs.io/en/latest/_images/tutorial_notebooks_tutorial4_Optimization_and_Initialization_68_0.svg)
+- Can expect adaptive learning rate to be crucial
+
+![](https://uvadlc-notebooks.readthedocs.io/en/latest/_images/tutorial_notebooks_tutorial4_Optimization_and_Initialization_70_0.svg)
+
+- Only Adam converges.
+
+#### What Optimizer to Use
+
+- While Adam can be seen to be superior to SGD, papers show that SGD with momentum generalizes better while Adam tends to overfit.
+  - Related to the idea of finding *wider* optima
+
+![](https://uvadlc-notebooks.readthedocs.io/en/latest/_images/flat_vs_sharp_minima.svg)
+
+- Black line is training loss surface, red line is test.
+- Finding sharp, narrow minima minimizes train loss but not test loss since a small change can have a significant impact for sharp minima, while a flat minima is more robust to such changes.
 
 
 
