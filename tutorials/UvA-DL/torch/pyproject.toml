@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "uva-dl-torch"
+version = "0.1.0"
+description = "torch tutorials from the uva-dl course"
+authors = ["Alan Yu <inv.alanyu2000@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
