@@ -1,0 +1,49 @@
+- Train
+  - Coding
+    - [StarCoder](https://huggingface.co/datasets/bigcode/starcoderdata)
+    - [CrystalCoder](https://huggingface.co/datasets/LLM360/CrystalCoderDatasets) 
+	- Combination of SlimPajama and StarCoder + instruction training data
+	- References datasets to look into, contains ShareGPT + Evol-ShareGPT
+  - General
+    - [SlimPajama](https://huggingface.co/datasets/cerebras/SlimPajama-627B)
+      - Variant of RedPajama that is deduped and has short examples removed. Pruned 49.6% of bytes from RedPajama.
+      - This is a filtered dataset from CommonCrawl
+      - [Code](https://github.com/togethercomputer/RedPajama-Data) for data
+  - QA/Reasoning
+    - [ProtonQA](https://github.com/asaparov/prontoqa)
+- Fine/Preference Tuning
+  - [UltraChat](https://huggingface.co/datasets/stingning/ultrachat) - Multi round dialogue data, only synthetic data from ChatGPT is used.
+  - [FLAN Collection](https://huggingface.co/datasets/Open-Orca/FLAN) - Instruction tuning dataset
+  - [FalseQA](https://github.com/thunlp/falseqa) - Used to tune models to recognize false premises. Human annotated.
+  - ShareGPT - Conversations, unfiltered.
+    - [Issue where someone links subset of the data](https://github.com/lm-sys/FastChat/issues/90)
+  - [Evol-Instruct](https://huggingface.co/datasets/WizardLM/WizardLM_evol_instruct_70k) - Used to train WizardLM
+  - [Capybara](https://huggingface.co/datasets/LDJnr/Capybara) - Latest synthetic dataset.
+  - [EverythingLM](https://huggingface.co/datasets/totally-not-an-llm/EverythingLM-data-V2) - Synthetic dataset
+- DPO
+  - [UltraFeedback](https://huggingface.co/datasets/openbmb/UltraFeedback) - Preference dataset, contains prompts from benchmarks.
+
+- Eval
+  - QA
+    - SIQA
+    - OpenBookQA
+    - SQuADv2
+    - Obqa
+    - [boolq](https://huggingface.co/datasets/boolq)
+    - [piqa](https://huggingface.co/datasets/piqa)
+    - [TruthfulQA](https://paperswithcode.com/dataset/truthfulqa)
+  - Math/Reasoning
+    - GSM8k
+    - [WinoGrande](https://huggingface.co/datasets/winogrande)
+    - [ARC](https://paperswithcode.com/dataset/arc)
+    - HellaSwag
+    - MMLU
+  - Coding
+    - HumanEval
+    - MBPP
+    - [APPS](https://huggingface.co/datasets/codeparrot/apps)
+- Stuff to look into
+  - [GPTeacher](https://github.com/teknium1/GPTeacher)
+  - [LogicLLM](https://github.com/teacherpeterpan/Logic-LLM?tab=readme-ov-file)
+  - [airoboros](https://github.com/jondurbin/airoboros)
+  - [Axolotl](https://github.com/OpenAccess-AI-Collective/axolotl)
